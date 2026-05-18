@@ -19,7 +19,7 @@
   <hr>
 </div>
 
-![Image Render Walkthrough](assets/imagerender.clip.gif)
+<img src="assets/imagerender.clip.gif" alt="Image Render Walkthrough" width="100%">
 
 <div align="center">
   <p><i>A smart, reusable, and resilient media rendering component designed to display images or Lottie animations without requiring exact hardcoded file paths.</i></p>

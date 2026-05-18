@@ -1,4 +1,4 @@
-async function View({ fileName = "obsidian_lottie.json", folderPath }) {
+function View({ fileName = "obsidian_lottie.json", folderPath }) {
   const isLottie = fileName.toLowerCase().endsWith(".json");
   const [mediaSrc, setMediaSrc] = dc.useState(null);
   const [loadScript, setLoadScript] = dc.useState(null);

@@ -3,6 +3,26 @@ function View({ fileName = "obsidian_lottie.json", folderPath }) {
   const [mediaSrc, setMediaSrc] = dc.useState(null);
   const [loadScript, setLoadScript] = dc.useState(null);
 
+  // Inject style to hide global status bar and view footers
+  dc.useEffect(() => {
+    const styleId = "image-render-status-suppression";
+    let styleEl = document.getElementById(styleId);
+    if (!styleEl) {
+      styleEl = document.createElement("style");
+      styleEl.id = styleId;
+      styleEl.innerHTML = `
+        .status-bar, .view-footer, .workspace-leaf-content-footer { 
+            display: none !important; 
+        }
+      `;
+      document.head.appendChild(styleEl);
+    }
+    return () => {
+      const el = document.getElementById(styleId);
+      if (el) el.remove();
+    };
+  }, []);
+
   // Load the loadScript function dynamically
   dc.useEffect(() => {
     dc.require(folderPath + "/src/utils/loadScript.js")

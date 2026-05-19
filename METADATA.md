@@ -1,6 +1,7 @@
 ---
 author: beto.group
-version: 1.1.1
+contributor: []
+version: 1.1.2
 id: image-render-888
 name: IMAGE RENDER
 description: A resilient media renderer that uses fuzzy search to locate and display images or Lottie animations without requiring exact file paths.
